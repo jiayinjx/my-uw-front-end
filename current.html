@@ -1,0 +1,622 @@
+
+<!DOCTYPE html>
+<html xmlns:dlm="http://www.uportal.org/layout/dlm" xmlns:upElemTitle="http://xml.apache.org/xalan/java/org.jasig.portal.security.xslt.XalanLayoutElementTitleHelper" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" lang="en-US" class="respondr">
+<head>
+  <title>My UW</title>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+  <meta name="apple-mobile-web-app-capable" content="yes"/>
+  <meta name="apple-mobile-web-app-status-bar-style" content="black"/>
+  <meta name="description" content="My UW"/>
+  <meta name="keywords" content="portal, uPortal, academic, higher education, open source, enterprise, JA-SIG, JASIG, Jasig"/>
+
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Oxygen" rel="stylesheet" type="text/css"/>
+
+  <!-- CSS links -->
+  <!-- <link href="/ResourceServingWebapp/rs/normalize/2.1.2/normalize-2.1.2.min.css" rel="stylesheet" type="text/css"/>
+  <link href="/ResourceServingWebapp/rs/fontawesome/4.0.3/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+  <link href="/ResourceServingWebapp/rs/bootstrap-plugins/accessibility/1.0.2/css/bootstrap-accessibility.min.css" rel="stylesheet" type="text/css"/>
+  <link href="/ResourceServingWebapp/rs/jqueryui/1.10.3/theme/smoothness/jquery-ui-1.10.3-smoothness.min.css" rel="stylesheet" type="text/css"/>
+  <link href="/portal/media/skins/respondr/defaultSkin.css" rel="stylesheet" type="text/css"/> -->
+
+  <!-- CSS links -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.1/normalize.min.css" rel="stylesheet" type="text/css"/>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.2.0/css/bootstrap.css" rel="stylesheet" type="text/css"/>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.10.4/css/jquery-ui.css" rel="stylesheet" type="text/css"/>
+  <link href="css/defaultSkin.css" rel="stylesheet" type="text/css"/>
+
+
+
+  <!-- Javascript links -->
+  <script src="/ResourceServingWebapp/rs/modernizr/2.6.2/modernizr-2.6.2.min.js" type="text/javascript"> </script>
+  <script src="/ResourceServingWebapp/rs/jquery/1.10.2/jquery-1.10.2.min.js" type="text/javascript"> </script>
+  <script src="/ResourceServingWebapp/rs/jquery-migrate/jquery-migrate-1.2.1.min.js" type="text/javascript"> </script>
+  <script src="/ResourceServingWebapp/rs/jqueryui/1.10.3/jquery-ui-1.10.3.min.js" type="text/javascript"> </script>
+  <script src="/ResourceServingWebapp/rs/bootstrap/3.1.1/js/bootstrap.min.js" type="text/javascript"> </script>
+  <script src="/ResourceServingWebapp/rs/bootstrap-plugins/accessibility/1.0.2/js/bootstrap-accessibility.min.js" type="text/javascript"> </script>
+  <script src="/ResourceServingWebapp/rs/fluid/pre1.5.0-6cb52a5083/js/fluid-custom.min.js" type="text/javascript"> </script>
+  <script src="/ResourceServingWebapp/rs/underscore/1.5.2/underscore-1.5.2.min.js" type="text/javascript"> </script>
+  <script src="/ResourceServingWebapp/rs/datatables/1.9.4/media/js/jquery.dataTables.min.js" type="text/javascript"> </script><script src="/ResourceServingWebapp/rs/datatables/1.9.4/plugins/integration/bootstrap/3/dataTables.bootstrap.js" type="text/javascript"> </script>
+  <script src="/ResourceServingWebapp/rs/datatables/1.9.4/extras/column-filter-widgets/js/ColumnFilterWidgets.js" type="text/javascript"> </script>
+  <script src="/portal/rs/conflict-resolution/js/resolve-conflicts.min.js" type="text/javascript"> </script>
+  <script src="/portal/media/skins/common/javascript/uportal/up-util.js" type="text/javascript"> </script>
+  <script src="/portal/media/skins/common/javascript/uportal/up-portlet-registry.js" type="text/javascript"> </script>
+  <script src="/portal/media/skins/common/javascript/uportal/up-entity-registry.js" type="text/javascript"> </script>
+  <script src="/portal/media/skins/common/javascript/uportal/up-portlet-browser.js" type="text/javascript"> </script>
+  <script src="/portal/media/skins/common/javascript/uportal/up-layout-draggable-manager.js" type="text/javascript"> </script>
+  <script src="/portal/media/skins/common/javascript/uportal/up-layout-gallery.js" type="text/javascript"> </script>
+  <script src="/portal/media/skins/common/javascript/uportal/up-fragment-permissions-manager.js" type="text/javascript"> </script>
+  <script src="/portal/media/skins/common/javascript/uportal/up-subscription-browser.js" type="text/javascript"> </script>
+  <script src="/portal/media/skins/common/javascript/uportal/up-layout-selector.js" type="text/javascript"> </script>
+  <script src="/portal/media/skins/common/javascript/uportal/up-skin-selector.js" type="text/javascript"> </script>
+  <script src="/portal/media/skins/common/javascript/uportal/up-tab-manager.js" type="text/javascript"> </script>
+  <script src="/portal/media/skins/common/javascript/uportal/up-layout-persistence.js" type="text/javascript"> </script>
+  <script src="/portal/media/skins/common/javascript/uportal/up-url-provider.js" type="text/javascript"> </script>
+  <script src="/portal/media/skins/common/javascript/uportal/up-layout-preferences.js" type="text/javascript"> </script>
+  <script src="/portal/media/skins/common/javascript/uportal/up-autocomplete.js" type="text/javascript"> </script>
+  <script src="/portal/media/skins/common/javascript/uportal/up-showHideToggle.js" type="text/javascript"> </script>
+  <script src="/portal/media/skins/common/javascript/uportal/entity-selector.js" type="text/javascript"> </script>
+  <script src="/portal/media/skins/common/javascript/uportal/up-parameter-editor.js" type="text/javascript"> </script>
+  <script src="/portal/media/skins/common/javascript/uportal/flyout-nav.js" type="text/javascript"> </script>
+  <script src="/portal/media/skins/common/javascript/uportal/up-translator.js" type="text/javascript"> </script>
+  <script src="/portal/media/skins/common/javascript/uportal/up-sidebar-improved.js" type="text/javascript"> </script>
+  <script src="/portal/media/skins/common/javascript/uportal/up-print-plugin.js" type="text/javascript"> </script>
+  <script src="/portal/media/skins/common/javascript/uportal/up-ga.js" type="text/javascript"> </script>
+  <script src="/portal/media/skins/common/javascript/uportal/up-favorite.js" type="text/javascript"> </script>
+  <script src="/portal/media/skins/common/javascript/bootstrap-rating-input.js" type="text/javascript"> </script>
+  <script src="/portal/media/skins/common/javascript/uportal/up-rating-option.js" type="text/javascript"> </script>
+  <script src="/ResourceServingWebapp/rs/jquery-plugins/noty/2.2.0/jquery.noty.packaged.min.js" type="text/javascript"> </script>
+  <link rel="shortcut icon" href="/portal/favicon.ico" type="image/x-icon"/>
+  <script type="text/javascript">
+    var up = up || {};
+    up.jQuery = jQuery.noConflict(true);
+    up.fluid = fluid;
+    fluid = null;
+    fluid_1_4 = null;
+    up._ = _.noConflict();
+    up._.templateSettings = {
+      interpolate : /{{=(.+?)}}/g,
+      evaluate    : /{{(.+?)}}/g
+    };
+
+    (function($) {
+      $(function() {
+        var navMenuToggle = function() {
+          var menu = $(".portal-nav .menu"), menuToggle = $(".portal-nav .menu-toggle");
+          // Toggle the menu visibility when the button is clicked.
+          menuToggle.click(function() {
+            //alert("Handler for .click() called.");
+            menu.toggleClass("show");
+            return false;
+          });
+          // Console for debugging.
+          console.debug("menu", menu, "menuToggle", menuToggle);
+        }
+
+        navMenuToggle();
+      });
+    })(up.jQuery);
+  </script></head>
+
+
+  <body class="up dashboard portal fl-theme-mist"><div id="up-notification"></div><div class="container-fluid global-container"><div class="row"><div id="region-global-sidebar-left" class="col-lg-0 hidden-lg" style="display: none;"><section id="portlet_u1311l1n21" class="up-portlet-wrapper side-bar-menu">
+
+                <ul class="list-group" style="padding-top: 10px;">
+                    <li class="list-group-item"><span class="glyphicon glyphicon-user"></span> My Profile</li>
+                    <li class="list-group-item"><a href='/portal/p/favorites'><span class="glyphicon glyphicon-star"></span> Favorites</a></li>
+                    <li class="list-group-item"><span class="glyphicon glyphicon-eye-open"></span> Settings</li>
+                    <li class="list-group-item"><a href='http://maps.wisc.edu' target='_blank'><span class="glyphicon glyphicon-map-marker"></span> Map</a></li>
+                    <li class="list-group-item"><a href='/portal/p/portletmarketplace'><span class="glyphicon glyphicon-cog"></span> Apps</a></li>
+                    <li class="list-group-item"><a href='/portal/p/feedback'><span class="glyphicon glyphicon-volume-up"></span> Feedback</a></li>
+                    <li class="list-group-item"><a href='/portal/p/myuw-help'><span class="glyphicon glyphicon-question-sign"></span> Help</a></li>
+                </ul>
+
+        </section></div><div id="global-side-bar-left-page" class="col-lg-12"><div id="wrapper"><header class="portal-header" role="banner"><div class="portal-global"><div class="container-fluid"><div class="row"><div class="col-xs-1 col-lg-0"><div id="global-sidebar-left-hamburger" class="pull-left hidden-lg"><button class="button" style="background: inherit; border: none; padding: .5em;"><span class="glyphicon glyphicon-align-justify"></span></button></div></div><script type="text/javascript">
+                                        up.jQuery(document).ready(function(){
+                                            up.jQuery('div#global-sidebar-left-hamburger').click(function(){
+
+                                                up.jQuery('div#region-global-sidebar-left').slideToggle(0,function(){
+
+                                                    if(up.jQuery('div#region-global-sidebar-left').hasClass('col-xs-4')) {
+                                                        //hide
+                                                        up.jQuery('div#region-global-sidebar-left').removeClass('col-xs-4').removeClass('col-sm-3');
+                                                        up.jQuery('div#global-side-bar-left-page').removeClass('col-xs-8').removeClass('col-sm-9');
+                                                    } else {
+                                                        //show
+                                                        up.jQuery('div#region-global-sidebar-left').addClass('col-xs-4').addClass('col-sm-3');
+                                                        up.jQuery('div#global-side-bar-left-page').addClass('col-xs-8').addClass('col-sm-9');
+                                                    }
+                                                });
+                                            });
+                                        });
+                                    </script><div class="col-xs-11 col-lg-12"><div id="region-pre-header" class="portal-user"><section id="portlet_u1311l1n14" class="up-portlet-wrapper notification-icon"><script src="/NotificationPortlet/scripts/jquery.notice.min.js" type="text/javascript"></script>
+
+<link rel="stylesheet" href="/NotificationPortlet/rs/fontawesome/4.0.3/css/font-awesome.min.css" type="text/css" media="screen" />
+
+<style>
+#Pluto_1996_u1311l1n14_2011_notificationIcon {
+    display: inline-block;
+}
+#Pluto_1996_u1311l1n14_2011_notificationIcon i {
+    font-size: 18px;
+}
+#Pluto_1996_u1311l1n14_2011_notificationIcon .notification-badge {
+    display: inline-block;
+    background-color: #cb4437;
+    border-radius: 2px;
+    padding: 2px;
+    font: bold 11px Arial;
+    color: #fff;
+    min-width: 15px;
+    position: relative;
+    right: 12px;
+    margin-right: -12px;
+    text-align: center;
+    text-shadow: 0 1px 0 rgba(0,0,0,0.1);
+    top: -9.0px;
+}
+</style>
+
+<div id="Pluto_1996_u1311l1n14_2011_notificationIcon">
+    <a href="/portal/p/notification" title="View notifications">
+        <i class="fa fa-warning"></i>
+    </a>
+    <div class="notification-badge" style="display: none;"><span class="notification-count"></span></div>
+</div>
+
+<script type="text/javascript">
+
+    var Pluto_1996_u1311l1n14_2011_ = Pluto_1996_u1311l1n14_2011_ || {};
+    Pluto_1996_u1311l1n14_2011_.jQuery = up.jQuery;
+        Pluto_1996_u1311l1n14_2011_.jQuery(function(){
+        var $ = Pluto_1996_u1311l1n14_2011_.jQuery;
+        var count = upnotice.pullFeed($, {
+            invokeNotificationServiceUrl: '/portal/f/u1311l1s13/p/notification-icon.u1311l1n14/normal/action.uP?pP_action=invokeNotificationService&pP_uuid=8d6b44b7-8725-47e0-9569-4d44f2931327',
+            getNotificationsUrl: '/portal/f/u1311l1s13/p/notification-icon.u1311l1n14/normal/GET-NOTIFICATIONS-UNCATEGORIZED.resource.uP'
+        }, function(feed) {
+            if (feed && feed.length > 0) {
+                $('#Pluto_1996_u1311l1n14_2011_notificationIcon .notification-count').html(feed.length);
+                $('#Pluto_1996_u1311l1n14_2011_notificationIcon .notification-badge').slideDown();
+            }
+        });
+
+    });
+
+</script>
+
+</section><section id="portlet_u1311l1n15" class="up-portlet-wrapper portal-greeting"><span class="user-name">Welcome&nbsp;JARED T HANSTRA</span>
+</section><section id="portlet_u1311l1n16" class="up-portlet-wrapper logout-launcher">
+
+-<a href="/portal/Logout" title="Log off and exit MyUW" class="up-portlet-control hide-content portal-logout">Sign Out</a>
+</section><section id="portlet_u1311l1n17" class="up-portlet-wrapper google-analytics-config"><script type="text/javascript">
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  var up = up || {}
+  up.analytics = up.analytics || {};
+  up.analytics.model = {"defaultConfig":{"name":"","propertyId":"UA-39233702-2","config":[],"dimensionGroups":[{"name":"6","value":"Facstaff"}]},"hosts":[{"name":"my-predev4.wisconsin.edu","propertyId":"UA-39233702-3","config":[],"dimensionGroups":[]}]};
+</script>
+</section></div></div></div></div></div><div class="container-fluid"><div class="row"><div id="region-header-left" class="col-sm-8 text-left"><section id="portlet_u1311l1n12" class="up-portlet-wrapper responsive-myuw-header"><h1><a href="/portal/Login?profile=respondr" id='myuw-header' title='Go Home'>MyUW</a></h1>
+        <style>
+         a#myuw-header {
+            color: white;
+            font-weight: bold;
+            font-size: larger;
+         }
+
+         a#myuw-header:hover {
+            text-decoration: none;
+         }
+        </style>
+        </section></div><div id="region-header-right" class="col-sm-4 text-right"><section id="portlet_u1311l1n8" class="up-portlet-wrapper search-launcher"><!-- The action URLs, including the ajaxSearchUrl, should have windowState=maximized or uPortal will waste time doing an
+     HTTP redirect to set it to maximized. -->
+<div id="webSearchContainer" class="fl-widget">
+    <div class="fl-widget-inner">
+      <div class="fl-widget-content">
+        <form class="form-inline form-search" role="form" method="post" action="/portal/p/search.ctf1/normal/action.uP" id="webSearchForm" onsubmit="document.getElementById('webSearchSubmit').disabled = 1;">
+          <div class="input-group">
+            <input id="Pluto_1696_u1311l1n8_2011_webSearchInput"  class="searchInput input-large search-query form-control" value="" name="query" type="text" placeholder="Enter search terms"/>
+            <span class="input-group-btn">
+              <button id="webSearchSubmit" type="submit" name="submit" class="btn btn-default" value="Search UW">
+                <span>Search UW</span><i class="fa fa-search"></i></button>
+            </span>
+          </div>
+            <input class="autocompleteUrl" name="autocompleteUrl" type="hidden" value="/portal/p/search.ctf1/normal/retrieveSearchJSONResults.resource.uP"/>
+        </form>
+      </div>
+    </div>
+</div>
+
+<script type="text/javascript" src="/ResourceServingWebapp/rs/jquery/1.10.2/jquery-1.10.2.min.js"></script>
+<script type="text/javascript" src="/ResourceServingWebapp/rs/jqueryui/1.10.3/jquery-ui-1.10.3.min.js"></script>
+
+<style type="text/css">
+  .ui-autocomplete.ui-menu {
+    padding: 0;
+    overflow: hidden;
+  }
+  .ui-autocomplete li {
+    list-style: none;
+        max-width: 315px; /* Fixes Autocomplete on 1st search after page render would have very wide results box off side of window */
+        /*max-height: 75px;*/ /* Limiting # of chars sent tends to keep description to 2 lines in autocomplete results so don't need max-height. */
+        overflow:hidden;
+  }
+
+  .ui-autocomplete .ui-menu-item a {
+    border-bottom: 1px solid #efefef;
+    padding: .5em;
+  }
+
+  .ui-autocomplete .ui-menu-item a:hover {
+    cursor: pointer;
+  }
+    .ui-autocomplete a.ui-state-focus .autocomplete-header {
+    color: #fff;
+  }
+
+  .ui-autocomplete a.ui-state-focus {
+    border: 0;
+    background: rgb(62, 70, 79);
+    color: #fff;
+  }
+  .ui-autocomplete a.ui-corner-all {
+    -webkit-border-radius: 0 0 0 0;
+    border-radius: 0 0 0 0;
+  }
+  .ui-autocomplete .autocomplete-header {
+    font-weight: 800;
+    color: rgb(123, 34, 64);
+  }
+
+</style>
+<script type="text/javascript">
+
+var initSearchAuto = initSearchAuto || function($, searchFieldSelector) {
+
+    var searchField = $(searchFieldSelector);
+    var actionUrl = searchField.closest('form').attr('action');
+    var searchUrl = $('input.autocompleteUrl')[0].value;
+
+    /**
+     * Helper method for making it a little easier to format the output in the menu
+     * @param  {object} item A JavaScript Object containing the item values
+     * @return {string}      Returns a formatted string that will be injected into the menu
+     */
+    var formatOutput = function(item) {
+        var output = '<a><span class="autocomplete-header">' + htmlEscape(item.label) + '</span><br>' + htmlEscape(item.desc) + '</a>';
+        return output;
+    }
+
+    // Simple function to escape specific HTML characters so they aren't a problem. &, quote, and single quote
+    // are handled by jQuery so only need to deal with < and >
+    function htmlEscape(str) {
+        return String(str)
+                .replace(/</g, '&lt;')
+                .replace(/>/g, '&gt;');
+    }
+
+    searchField.autocomplete({
+        position: { collision: "flip" },
+
+        minLength: 3,
+        source: function(request, response) {
+            $.get( actionUrl, { query: request.term, ajax: "true" } )
+            .done(function( data ) {
+                /**
+                 * Make a second AJAX request to get the actual values.
+                 */
+                $.getJSON( searchUrl, { query: request.term, ajax: true } )
+                .done(function ( data ) {
+                    response($.map(data.results, function (value, key) {
+                        return {
+                            label: value.title,
+                            desc: (value.description === null) ? '' : value.description,
+                            url: value.url
+                        };
+                    }));
+                });
+            });
+        },
+        select: function( event, ui ) {
+            window.location.href = ui.item.url;
+            return false;
+        }
+    })
+    .data( "ui-autocomplete" )
+    ._renderItem = function( ul, item ) {
+        return $( "<li>" )
+        .append( formatOutput(item) )
+        .appendTo( ul );
+    };
+};
+</script><script language="javascript" type="text/javascript">var searchjQ=searchjQ||{};searchjQ.Pluto_1696_u1311l1n8_2011_=searchjQ.Pluto_1696_u1311l1n8_2011_||{};searchjQ.Pluto_1696_u1311l1n8_2011_.jQuery=jQuery.noConflict(true);searchjQ.Pluto_1696_u1311l1n8_2011_.jQuery(document).ready(function(){initSearchAuto(searchjQ.Pluto_1696_u1311l1n8_2011_.jQuery,"#Pluto_1696_u1311l1n8_2011_webSearchInput");});</script>
+</section></div></div></div><div id="region-header-bottom" class="container-fluid"><div class="row"><div class="col-sm-12"><section id="portlet_u1311l1n10" class="up-portlet-wrapper beta-notification">
+            <div class="alert alert-info alert-dismissable">
+                <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+                You are using a beta version of MyUW. If you would like to go back to the classic view please click <a href="/portal/Login?profile=default">here</a>.
+            </div></section></div></div></div></header><div id="portalPageBody" class="portal-content" role="main"><div class="container-fluid"><div class="row"><div id="region-sidebar-left" class="col-lg-2 visible-lg"><section id="portlet_u1311l1n19" class="up-portlet-wrapper side-bar-menu">
+
+                <ul class="list-group" style="padding-top: 10px;">
+                    <li class="list-group-item"><span class="glyphicon glyphicon-user"></span> My Profile</li>
+                    <li class="list-group-item"><a href='/portal/p/favorites'><span class="glyphicon glyphicon-star"></span> Favorites</a></li>
+                    <li class="list-group-item"><span class="glyphicon glyphicon-eye-open"></span> Settings</li>
+                    <li class="list-group-item"><a href='http://maps.wisc.edu' target='_blank'><span class="glyphicon glyphicon-map-marker"></span> Map</a></li>
+                    <li class="list-group-item"><a href='/portal/p/portletmarketplace'><span class="glyphicon glyphicon-cog"></span> Apps</a></li>
+                    <li class="list-group-item"><a href='/portal/p/feedback'><span class="glyphicon glyphicon-volume-up"></span> Feedback</a></li>
+                    <li class="list-group-item"><a href='/portal/p/myuw-help'><span class="glyphicon glyphicon-question-sign"></span> Help</a></li>
+                </ul>
+
+        </section></div><div class="col-lg-10"><div class="row-fluid"><div id="portalPageBodyMessage" class="col-md-12"></div></div><div id="portalPageBodyColumns" class="row-fluid"><div id="column_u1510l1s8" class="portal-page-column column-1 col-md-12 movable deletable editable canAddChildren"><div id="inner-column_u1510l1s8" class="portal-page-column-inner"><section id="portlet_u1510l1n40" class="up-portlet-wrapper wisc-mail movable deletable   " fname="wisc-mail"><div class="modal fade" id="ratePortletModalu1510l1n40" tabindex="-1" role="dialog" aria-labelledby="RatingModal" aria-hidden="true" data-title="Rate WiscMail" data-close.button.label="Close" data-save.button.label="Save &amp; Close" data-geturl="/portal/p/portletmarketplace.ctf2/normal/getRating.resource.uP?pP_portletFName=wisc-mail" data-saveurl="/portal/p/portletmarketplace.ctf2/normal/saveRating.resource.uP?pP_portletFName=wisc-mail" data-get.rating.unsucessful="Sorry, your previous rating of the App could not be retrieved" data-rating.save.successful="Your rating is much appreciated" data-rating.save.unsuccessful="Your rating did not save.  Please try again!" data-rating.instructions.unrated="You have not yet rated WiscMail.  Share a rating if you wish." data-rating.instructions.rated="You have already rated WiscMail.  You may update your rating if you wish."></div><script type="text/javascript">
+            (function($) {
+                $( document ).ready(function() {
+                    $('#ratePortletModalu1510l1n40').createRatingModal();
+                    $('#ratePortletModalu1510l1n40').find('input').rating();
+                });
+            })(up.jQuery);
+        </script><div class="up-portlet-wrapper-inner"><div id="toolbar_u1510l1n40" class="fl-widget-titlebar up-portlet-titlebar round-top"><h2 class="portlet-title round-top"><a id="u1510l1n40" href="/portal/f/u1510l1s4/p/wisc-mail.u1510l1n40/max/render.uP?pCp">WiscMail</a><div class="btn-group"><a class="btn btn-link dropdown-toggle" data-toggle="dropdown" href="#"><span class="glyphicon glyphicon-cog"></span></a><ul class="dropdown-menu chrome-options" style="right: 0; left: auto;"><li><a href="javascript:;" title="Rate this App" class="rateThisPortletu1510l1n40" data-toggle="modal" data-target="#ratePortletModalu1510l1n40"><span>Rate this App</span></a></li><li><a href="/portal/f/u1510l1s4/p/wisc-mail.u1510l1n40/max/render.uP?pCp" title="Enter maximized mode for this App" class="up-portlet-control focus">Maximize</a></li><li><a href="/portal/f/u1510l1s4/normal/render.uP?pCt=wisc-mail.u1510l1n40&amp;pCs=minimized&amp;pCp" title="Enter minimized mode for this App" class="up-portlet-control hide-content">Minimize</a></li><li><a href="javascript:;" title="Add this App to my favorites" class="addToFavoriteLink40"><span>Add to my Favorites</span></a><script type="text/javascript">
+                    (function($) {
+                        $( document ).ready(function() {
+                            $('.addToFavoriteLink40').click({portletId : '40', context : '/portal'}, up.addToFavorite);
+                        });
+                    })(up.jQuery);
+                </script></li></ul></div></h2></div><div id="portletContent_u1510l1n40" class="fl-widget-content fl-fix up-portlet-content-wrapper round-bottom"><div class="up-portlet-content-wrapper-inner"><div class="webproxy-mobile-fix" data-role="content">
+<!-- $Id: portal-init.html,v 1.3 2006-06-16 20:28:30 jrthompson2 Exp $ wtweb4 -->
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<title>WiscMail Portal View</title>
+<style type="text/css" media="all">
+.wiscmail_notice {
+    color: #FF6600;
+}
+div.mboxpreview {
+    font-size: 12px;
+    margin-left: 5px;
+    clear: both;
+}
+div.mboxpreviewfrom {
+    font-weight: bold;
+    float: left;
+    overflow: hidden;
+    white-space: nowrap;
+    width: 35%;
+    margin-right: 4px;
+}
+div.mboxpreviewsubject {
+    float: left;
+    overflow: hidden;
+    white-space: nowrap;
+    width: 55%;
+}
+div.login {
+    margin-bottom: 5px;
+}
+div.wmpspacer {
+    margin-bottom: 20px;
+    clear: both;
+}
+</style>
+<script type="text/javascript">
+    function setClassStyle(myClass,attribute,value) {
+        var alltags = document.getElementsByTagName("*");
+        for (i=0;i<alltags.length;i++)
+            if (alltags[i].className == myClass)
+                if (attribute == 'visibility')
+                    alltags[i].style.visibility = value;
+                else if (attribute == 'display')
+                    alltags[i].style.display = value;
+    }
+</script>
+</head>
+<body>
+<div class="wiscmail">
+<span id="wiscmail_statusmsg">Loading...</span>
+<span id="wiscmail_nojs">Javascript is required to sign in</span>
+
+You are not signed in to NetID.
+<br>
+<a href="https://wisctest.wisc.edu/login" target="_blank">WiscMail&nbsp;&#187;</a>
+ <!-- end accounts -->
+
+<iframe src="https://wisctest.wisc.edu/iwc_static/layout/imageList.html" width="0" height="0" frameborder="0"></iframe>
+
+</div> <!-- class=wiscmail -->
+<script type="text/javascript">
+ document.getElementById('wiscmail_statusmsg').innerHTML = '';
+ document.getElementById('wiscmail_statusmsg').style.display = 'none';
+ document.getElementById('wiscmail_nojs').innerHTML = '';
+ document.getElementById('wiscmail_nojs').style.display = 'none';
+ setClassStyle('login','visibility','visible');
+
+</script>
+</body>
+</html>
+</div></div></div></div></section><section id="portlet_u1510l1n213" class="up-portlet-wrapper notification movable deletable   " fname="notification"><div class="modal fade" id="ratePortletModalu1510l1n213" tabindex="-1" role="dialog" aria-labelledby="RatingModal" aria-hidden="true" data-title="Rate Notification App" data-close.button.label="Close" data-save.button.label="Save &amp; Close" data-geturl="/portal/p/portletmarketplace.ctf2/normal/getRating.resource.uP?pP_portletFName=notification" data-saveurl="/portal/p/portletmarketplace.ctf2/normal/saveRating.resource.uP?pP_portletFName=notification" data-get.rating.unsucessful="Sorry, your previous rating of the App could not be retrieved" data-rating.save.successful="Your rating is much appreciated" data-rating.save.unsuccessful="Your rating did not save.  Please try again!" data-rating.instructions.unrated="You have not yet rated Notification App.  Share a rating if you wish." data-rating.instructions.rated="You have already rated Notification App.  You may update your rating if you wish."></div><script type="text/javascript">
+            (function($) {
+                $( document ).ready(function() {
+                    $('#ratePortletModalu1510l1n213').createRatingModal();
+                    $('#ratePortletModalu1510l1n213').find('input').rating();
+                });
+            })(up.jQuery);
+        </script><div class="up-portlet-wrapper-inner"><div id="toolbar_u1510l1n213" class="fl-widget-titlebar up-portlet-titlebar round-top"><h2 class="portlet-title round-top"><a id="u1510l1n213" href="/portal/f/u1510l1s4/p/notification.u1510l1n213/max/render.uP?pCp">Notification App</a><div class="btn-group"><a class="btn btn-link dropdown-toggle" data-toggle="dropdown" href="#"><span class="glyphicon glyphicon-cog"></span></a><ul class="dropdown-menu chrome-options" style="right: 0; left: auto;"><li><a href="javascript:;" title="Rate this App" class="rateThisPortletu1510l1n213" data-toggle="modal" data-target="#ratePortletModalu1510l1n213"><span>Rate this App</span></a></li><li><a href="/portal/f/u1510l1s4/p/notification.u1510l1n213/max/render.uP?pCp" title="Enter maximized mode for this App" class="up-portlet-control focus">Maximize</a></li><li><a href="/portal/f/u1510l1s4/normal/render.uP?pCt=notification.u1510l1n213&amp;pCs=minimized&amp;pCp" title="Enter minimized mode for this App" class="up-portlet-control hide-content">Minimize</a></li><li><a href="javascript:;" title="Add this App to my favorites" class="addToFavoriteLink1896"><span>Add to my Favorites</span></a><script type="text/javascript">
+                    (function($) {
+                        $( document ).ready(function() {
+                            $('.addToFavoriteLink1896').click({portletId : '1896', context : '/portal'}, up.addToFavorite);
+                        });
+                    })(up.jQuery);
+                </script></li></ul></div></h2></div><div id="portletContent_u1510l1n213" class="fl-widget-content fl-fix up-portlet-content-wrapper round-bottom"><div class="up-portlet-content-wrapper-inner"><script src="/NotificationPortlet/rs/jquery/1.6.1/jquery-1.6.1.min.js" type="text/javascript"></script>
+<script src="/NotificationPortlet/scripts/jquery.notice.min.js" type="text/javascript"></script>
+
+<link type="text/css" rel="stylesheet" href="/NotificationPortlet/styles/simple-list.min.css"/>
+
+<style type="text/css">
+#Pluto_1896_u1510l1n213_2011_notificationListView .hidden { display: none; }
+#Pluto_1896_u1510l1n213_2011_notificationListView .summary-template {text-align: right; border-top: 1px dotted black;}
+</style>
+
+<div id="Pluto_1896_u1510l1n213_2011_notificationListView" class="notification-list-view" style="display: none;">
+
+    <ul class="notification-list">
+        <li class="notification-list-item portlet-msg-alert template hidden">
+            <ul class="notification-actions hidden">
+                <li class="action-template hidden"><a class="button" href="javascript:void(0);"></a></li>
+            </ul>
+            <div class="notification-text">
+                <span class="title"></span> <a class="link" href=""></a>
+            </div>
+        </li>
+    </ul>
+
+    <div class="summary-template">
+
+        Showing <span class="showing"></span> out of <span class="total"></span> <a href="/portal/f/u1510l1s4/p/notification.u1510l1n213/max/render.uP">Show All Notifications</a>
+    </div>
+
+</div>
+
+<script type="text/javascript">
+    var Pluto_1896_u1510l1n213_2011_ = Pluto_1896_u1510l1n213_2011_ || {};
+    Pluto_1896_u1510l1n213_2011_.jQuery = jQuery.noConflict(true);
+
+    Pluto_1896_u1510l1n213_2011_.jQuery(document).ready(function(){
+        Pluto_1896_u1510l1n213_2011_.jQuery(function(){
+            var $ = Pluto_1896_u1510l1n213_2011_.jQuery;
+
+            var container = $("#Pluto_1896_u1510l1n213_2011_notificationListView");
+
+            upnotice.show($, container, {
+                invokeNotificationServiceUrl: '/portal/f/u1510l1s4/p/notification.u1510l1n213/normal/action.uP?pP_action=invokeNotificationService',
+                getNotificationsUrl: '/portal/f/u1510l1s4/p/notification.u1510l1n213/normal/GET-NOTIFICATIONS-UNCATEGORIZED.resource.uP',
+                invokeActionUrlTemplate: '/portal/f/u1510l1s4/p/notification.u1510l1n213/normal/action.uP?pP_notificationId=NOTIFICATIONID&pP_actionId=ACTIONID',
+                numberToDisplay: 5
+            });
+
+        });
+    });
+
+</script>
+</div></div></div></section></div></div><div id="column_u1510l1s5" class="portal-page-column column-2 col-md-6 movable  editable canAddChildren"><div id="inner-column_u1510l1s5" class="portal-page-column-inner"><section id="portlet_u1510l1n210" class="up-portlet-wrapper wisccal-available-portlet movable deletable   " fname="wisccal-available-portlet"><div class="modal fade" id="ratePortletModalu1510l1n210" tabindex="-1" role="dialog" aria-labelledby="RatingModal" aria-hidden="true" data-title="Rate WiscCalAvailablePortlet" data-close.button.label="Close" data-save.button.label="Save &amp; Close" data-geturl="/portal/p/portletmarketplace.ctf2/normal/getRating.resource.uP?pP_portletFName=wisccal-available-portlet" data-saveurl="/portal/p/portletmarketplace.ctf2/normal/saveRating.resource.uP?pP_portletFName=wisccal-available-portlet" data-get.rating.unsucessful="Sorry, your previous rating of the App could not be retrieved" data-rating.save.successful="Your rating is much appreciated" data-rating.save.unsuccessful="Your rating did not save.  Please try again!" data-rating.instructions.unrated="You have not yet rated WiscCalAvailablePortlet.  Share a rating if you wish." data-rating.instructions.rated="You have already rated WiscCalAvailablePortlet.  You may update your rating if you wish."></div><script type="text/javascript">
+            (function($) {
+                $( document ).ready(function() {
+                    $('#ratePortletModalu1510l1n210').createRatingModal();
+                    $('#ratePortletModalu1510l1n210').find('input').rating();
+                });
+            })(up.jQuery);
+        </script><div class="up-portlet-wrapper-inner"><div id="toolbar_u1510l1n210" class="fl-widget-titlebar up-portlet-titlebar round-top"><h2 class="portlet-title round-top"><a id="u1510l1n210" href="/portal/f/u1510l1s4/p/wisccal-available-portlet.u1510l1n210/max/render.uP?pCp">WiscCal - Make an Appointment</a><div class="btn-group"><a class="btn btn-link dropdown-toggle" data-toggle="dropdown" href="#"><span class="glyphicon glyphicon-cog"></span></a><ul class="dropdown-menu chrome-options" style="right: 0; left: auto;"><li><a href="javascript:;" title="Rate this App" class="rateThisPortletu1510l1n210" data-toggle="modal" data-target="#ratePortletModalu1510l1n210"><span>Rate this App</span></a></li><li><a href="/portal/f/u1510l1s4/p/wisccal-available-portlet.u1510l1n210/max/render.uP?pCp" title="Enter maximized mode for this App" class="up-portlet-control focus">Maximize</a></li><li><a href="/portal/f/u1510l1s4/normal/render.uP?pCt=wisccal-available-portlet.u1510l1n210&amp;pCs=minimized&amp;pCp" title="Enter minimized mode for this App" class="up-portlet-control hide-content">Minimize</a></li><li><a href="javascript:;" title="Add this App to my favorites" class="addToFavoriteLink39"><span>Add to my Favorites</span></a><script type="text/javascript">
+                    (function($) {
+                        $( document ).ready(function() {
+                            $('.addToFavoriteLink39').click({portletId : '39', context : '/portal'}, up.addToFavorite);
+                        });
+                    })(up.jQuery);
+                </script></li></ul></div></h2></div><div id="portletContent_u1510l1n210" class="fl-widget-content fl-fix up-portlet-content-wrapper round-bottom"><div class="up-portlet-content-wrapper-inner"><link rel="stylesheet" type="text/css" href="/WiscCalAvailablePortlet/css/available-common.css" media="all"/>
+<div class="SchedulingAssistant">
+<div class="info">
+<p>
+No Schedule Owners have shared their schedule with you at this time.</p>
+If you are a Student looking for an Academic Advisor, look for Academic Advisors with Public Profiles at:<br/>
+<a target="_new_advisor_window" href="https://calendar-test.doit.wisc.edu/scheduling-assistant/public/advisors.html" title="Opens new window to WiscCal Schedules for UW Academic Advisors">WiscCal Schedules for UW Academic Advisors&raquo;</a>
+</div>
+<hr/>
+<a target="_new_search_window" href="https://calendar-test.doit.wisc.edu/scheduling-assistant/public/index.html" title="Opens new window to WiscCal Schedule Assistant Profile Search">Search Public Profiles&raquo;</a><br/>
+<a target="_new_sa_window" href="https://calendar-test.doit.wisc.edu/scheduling-assistant/" title="Opens new window to Schedule Assistant Home">Scheduling Assistant Home&raquo;</a>
+</div> <!--  close SchedulingAssistant --></div></div></div></section></div></div><div id="column_u1510l1s6" class="portal-page-column column-3 col-md-6 movable deletable editable canAddChildren"><div id="inner-column_u1510l1s6" class="portal-page-column-inner"><section id="portlet_u1510l1n212" class="up-portlet-wrapper favorites movable deletable   " fname="favorites"><div class="modal fade" id="ratePortletModalu1510l1n212" tabindex="-1" role="dialog" aria-labelledby="RatingModal" aria-hidden="true" data-title="Rate Favorites" data-close.button.label="Close" data-save.button.label="Save &amp; Close" data-geturl="/portal/p/portletmarketplace.ctf2/normal/getRating.resource.uP?pP_portletFName=favorites" data-saveurl="/portal/p/portletmarketplace.ctf2/normal/saveRating.resource.uP?pP_portletFName=favorites" data-get.rating.unsucessful="Sorry, your previous rating of the App could not be retrieved" data-rating.save.successful="Your rating is much appreciated" data-rating.save.unsuccessful="Your rating did not save.  Please try again!" data-rating.instructions.unrated="You have not yet rated Favorites.  Share a rating if you wish." data-rating.instructions.rated="You have already rated Favorites.  You may update your rating if you wish."></div><script type="text/javascript">
+            (function($) {
+                $( document ).ready(function() {
+                    $('#ratePortletModalu1510l1n212').createRatingModal();
+                    $('#ratePortletModalu1510l1n212').find('input').rating();
+                });
+            })(up.jQuery);
+        </script><div class="up-portlet-wrapper-inner"><div id="toolbar_u1510l1n212" class="fl-widget-titlebar up-portlet-titlebar round-top"><h2 class="portlet-title round-top"><a id="u1510l1n212" href="/portal/f/u1510l1s4/p/favorites.u1510l1n212/max/render.uP?pCp">Favorites</a><div class="btn-group"><a class="btn btn-link dropdown-toggle" data-toggle="dropdown" href="#"><span class="glyphicon glyphicon-cog"></span></a><ul class="dropdown-menu chrome-options" style="right: 0; left: auto;"><li><a href="javascript:;" title="Rate this App" class="rateThisPortletu1510l1n212" data-toggle="modal" data-target="#ratePortletModalu1510l1n212"><span>Rate this App</span></a></li><li><a href="/portal/f/u1510l1s4/p/favorites.u1510l1n212/max/render.uP?pCp" title="Enter maximized mode for this App" class="up-portlet-control focus">Maximize</a></li><li><a href="/portal/f/u1510l1s4/normal/render.uP?pCt=favorites.u1510l1n212&amp;pCs=minimized&amp;pCp" title="Enter minimized mode for this App" class="up-portlet-control hide-content">Minimize</a></li><li><a href="/portal/f/u1510l1s4/normal/render.uP?pCt=favorites.u1510l1n212&amp;pCm=edit&amp;pCs=%24portalurlstate&amp;pCp#u1510l1n212" title="Edit App" class="up-portlet-control edit">Edit</a></li><li><a href="javascript:;" title="Add this App to my favorites" class="addToFavoriteLink1496"><span>Add to my Favorites</span></a><script type="text/javascript">
+                    (function($) {
+                        $( document ).ready(function() {
+                            $('.addToFavoriteLink1496').click({portletId : '1496', context : '/portal'}, up.addToFavorite);
+                        });
+                    })(up.jQuery);
+                </script></li></ul></div></h2></div><div id="portletContent_u1510l1n212" class="fl-widget-content fl-fix up-portlet-content-wrapper round-bottom"><div class="up-portlet-content-wrapper-inner"><div>
+<ul class="list-group">
+  <li class="list-group-item">
+      <span class="glyphicon glyphicon-chevron-right pull-right"></span>
+      <a href="/portal/f/u1410l1s4/render.uP">Academics</a>
+    </li>
+  <li class="list-group-item">
+      <span class="glyphicon glyphicon-chevron-right pull-right"></span>
+      <a href="/portal/f/u1411l1s4/render.uP">Work Information</a>
+    </li>
+  <li class="list-group-item">
+      <span class="glyphicon glyphicon-star pull-right"></span>
+      <a href="/portal/p/weather/render.uP">Weather</a>
+    </li>
+  <li class="list-group-item">
+      <span class="glyphicon glyphicon-star pull-right"></span>
+      <a href="/portal/p/my-bookmarks/render.uP">My Bookmarks</a>
+    </li>
+  <li class="list-group-item">
+      <span class="glyphicon glyphicon-star pull-right"></span>
+      <a href="/portal/p/myuw-news/render.uP">News About My UW</a>
+    </li>
+  </ul>
+
+  <span class="pull-right">
+  <a href="/portal/p/portletmarketplace/max/render.uP">
+      Find Apps</a>
+  </span>
+  </div>
+</div></div></div></section></div></div><div id="column_u1510l1s7" class="portal-page-column column-4 col-md-12 movable deletable editable canAddChildren"><div id="inner-column_u1510l1s7" class="portal-page-column-inner"></div></div></div></div></div></div></div><footer class="portal-footer-legal" role="contentinfo"><div class="container-fluid"><div class="portal-power"><div id="portalPageFooterLinks"><span>© 2014, Board of Regents of the <a href="http://www.wisconsin.edu/">University of Wisconsin System</a></span><br/><span><a href="/portal/normal/render.uP?pCt=feedback.ctf3"><span>Feedback</span></a><span> - </span><span>my-predev4</span><span> - </span><span>4.1.0.1-SNAPSHOT</span></span><br/><span>Session Key: </span><span>duuse8ce</span><br/></div></div></div></footer></div></div></div></div><div id="portalDropWarning" class="drop-warning" style="display:none;"><p>This App cannot be moved here. The App underneath is locked.</p></div><script type="text/javascript">
+
+        up.jQuery(document).ready(function() {
+
+            if(window.location.search.indexOf('redirectToDefault=true') > 0) {
+              up.jQuery('#up-notification').noty({text: 'It looks like the page you were attempting to go to does not exist so we redirected you here.', type: 'information'});
+            }
+
+
+            var options = {
+                tabContext: 'header',
+                numberOfPortlets: '0',
+                portalContext: '/portal',
+                mediaPath: '/portal/media/skins/respondr',
+                currentSkin: 'defaultSkin',
+                subscriptionsSupported: 'true',
+                layoutPersistenceUrl: '/portal/api/layout',
+                channelRegistryUrl: '/portal/api/portletList',
+                subscribableTabUrl: '/portal/api/subscribableTabs.json',
+                columnWidthClassPattern: 'col-md-',
+                columnWidthClassFunction: function(column) {
+                    return 'col-md-' + Math.round(column / 8.3333);
+                },
+                messages: {
+                    confirmRemoveTab: 'Are you sure you want to remove this tab?',
+                    confirmRemovePortlet: 'Are you sure you want to remove this App?',
+                    addTabLabel: 'My Tab',
+                    column: 'Column',
+                    columns: 'Columns',
+                    fullWidth: 'Full-width',
+                    narrowWide: 'Narrow, wide',
+                    even: 'Even',
+                    wideNarrow: 'Wide, narrow',
+                    narrowWideNarrow: 'Narrow, wide, narrow',
+                    searchForStuff: 'Search for Modules',
+                    allCategories: 'ALL',
+                    persistenceError: 'Error persisting layout change'
+                }
+            };
+            var layoutPreferences = up.LayoutPreferences("body", options);
+            // For the portlet/Respondr version of the gallery control,
+            // we must open it ourselves (if present) when the page loads.
+            if (layoutPreferences.components.gallery) {
+                layoutPreferences.components.gallery.openGallery();
+            }
+
+        });
+    </script><script type="text/javascript">
+                up.analytics = up.analytics || {};
+                up.analytics.host = 'my-predev4.doit.wisc.edu';
+                up.analytics.portletData = {"2096_u1311l1n19_2011":{"fname":"side-bar-menu","executionTimeNano":9832834},"40_u1510l1n40_2011":{"fname":"wisc-mail","executionTimeNano":58416},"1696_u1311l1n8_2011":{"fname":"search-launcher","executionTimeNano":45441750},"1796_u1311l1n10_2011":{"fname":"beta-notification","executionTimeNano":8960916},"1806_u1311l1n12_2011":{"fname":"responsive-myuw-header","executionTimeNano":9634917},"1996_u1311l1n14_2011":{"fname":"notification-icon","executionTimeNano":26137583},"1997_u1311l1n16_2011":{"fname":"logout-launcher","executionTimeNano":15236167},"2096_u1311l1n21_2011":{"fname":"side-bar-menu","executionTimeNano":8791500},"1196_u1110l1n5_2011":{"fname":"google-analytics-config","executionTimeNano":38334},"39_u1510l1n210_2011":{"fname":"wisccal-available-portlet","executionTimeNano":120956166},"1998_u1311l1n15_2011":{"fname":"portal-greeting","executionTimeNano":14071750},"1496_u1510l1n212_2011":{"fname":"favorites","executionTimeNano":65106750},"1196_u1311l1n17_2011":{"fname":"google-analytics-config","executionTimeNano":35834},"1896_u1510l1n213_2011":{"fname":"notification","executionTimeNano":25064582}};
+                up.analytics.pageData = {"tab":{"id":1591,"fragmentName":"mum-lo-respondr-welcome","tabName":"Home","displayString":"Home (mum-lo-respondr-welcome)"},"urlState":"NORMAL","executionTimeNano":762405499};
+            </script></body></html>

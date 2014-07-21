@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html xmlns:dlm="http://www.uportal.org/layout/dlm" xmlns:upElemTitle="http://xml.apache.org/xalan/java/org.jasig.portal.security.xslt.XalanLayoutElementTitleHelper" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" lang="en-US" class="respondr">
+<head>
+  <title>My UW</title>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+  <meta name="apple-mobile-web-app-capable" content="yes"/>
+  <meta name="apple-mobile-web-app-status-bar-style" content="black"/>
+  <meta name="description" content="My UW"/>
+  <meta name="keywords" content="portal, uPortal, academic, higher education, open source, enterprise, JA-SIG, JASIG, Jasig"/>
+
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Oxygen" rel="stylesheet" type="text/css"/>
+
+  <!-- CSS links -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.1/normalize.min.css" rel="stylesheet" type="text/css"/>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.2.0/css/bootstrap.css" rel="stylesheet" type="text/css"/>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.10.4/css/jquery-ui.css" rel="stylesheet" type="text/css"/>
+  <link href="css/styles.css" rel="stylesheet" type="text/css">
+  <link href="css/defaultSkin.css" rel="stylesheet" type="text/css"/>
+
+
+
+  <!-- Javascript links -->
+  <script src="/ResourceServingWebapp/rs/modernizr/2.6.2/modernizr-2.6.2.min.js" type="text/javascript"> </script>
+  <script src="/ResourceServingWebapp/rs/jquery/1.10.2/jquery-1.10.2.min.js" type="text/javascript"> </script>
+  <script src="/ResourceServingWebapp/rs/jquery-migrate/jquery-migrate-1.2.1.min.js" type="text/javascript"> </script>
+  <script src="/ResourceServingWebapp/rs/jqueryui/1.10.3/jquery-ui-1.10.3.min.js" type="text/javascript"> </script>
+  <script src="/ResourceServingWebapp/rs/bootstrap/3.1.1/js/bootstrap.min.js" type="text/javascript"> </script>
+  <script src="/ResourceServingWebapp/rs/bootstrap-plugins/accessibility/1.0.2/js/bootstrap-accessibility.min.js" type="text/javascript"> </script>
+  <script src="/ResourceServingWebapp/rs/fluid/pre1.5.0-6cb52a5083/js/fluid-custom.min.js" type="text/javascript"> </script>
+  <script src="/ResourceServingWebapp/rs/underscore/1.5.2/underscore-1.5.2.min.js" type="text/javascript"> </script>
+  <script src="/ResourceServingWebapp/rs/datatables/1.9.4/media/js/jquery.dataTables.min.js" type="text/javascript"> </script><script src="/ResourceServingWebapp/rs/datatables/1.9.4/plugins/integration/bootstrap/3/dataTables.bootstrap.js" type="text/javascript"> </script>
+  <script src="/ResourceServingWebapp/rs/datatables/1.9.4/extras/column-filter-widgets/js/ColumnFilterWidgets.js" type="text/javascript"> </script>
+  <script src="/portal/rs/conflict-resolution/js/resolve-conflicts.min.js" type="text/javascript"> </script>
+  <script src="/portal/media/skins/common/javascript/uportal/up-util.js" type="text/javascript"> </script>
+  <script src="/portal/media/skins/common/javascript/uportal/up-portlet-registry.js" type="text/javascript"> </script>
+  <script src="/portal/media/skins/common/javascript/uportal/up-entity-registry.js" type="text/javascript"> </script>
+  <script src="/portal/media/skins/common/javascript/uportal/up-portlet-browser.js" type="text/javascript"> </script>
+  <script src="/portal/media/skins/common/javascript/uportal/up-layout-draggable-manager.js" type="text/javascript"> </script>
+  <script src="/portal/media/skins/common/javascript/uportal/up-layout-gallery.js" type="text/javascript"> </script>
+  <script src="/portal/media/skins/common/javascript/uportal/up-fragment-permissions-manager.js" type="text/javascript"> </script>
+  <script src="/portal/media/skins/common/javascript/uportal/up-subscription-browser.js" type="text/javascript"> </script>
+  <script src="/portal/media/skins/common/javascript/uportal/up-layout-selector.js" type="text/javascript"> </script>
+  <script src="/portal/media/skins/common/javascript/uportal/up-skin-selector.js" type="text/javascript"> </script>
+  <script src="/portal/media/skins/common/javascript/uportal/up-tab-manager.js" type="text/javascript"> </script>
+  <script src="/portal/media/skins/common/javascript/uportal/up-layout-persistence.js" type="text/javascript"> </script>
+  <script src="/portal/media/skins/common/javascript/uportal/up-url-provider.js" type="text/javascript"> </script>
+  <script src="/portal/media/skins/common/javascript/uportal/up-layout-preferences.js" type="text/javascript"> </script>
+  <script src="/portal/media/skins/common/javascript/uportal/up-autocomplete.js" type="text/javascript"> </script>
+  <script src="/portal/media/skins/common/javascript/uportal/up-showHideToggle.js" type="text/javascript"> </script>
+  <script src="/portal/media/skins/common/javascript/uportal/entity-selector.js" type="text/javascript"> </script>
+  <script src="/portal/media/skins/common/javascript/uportal/up-parameter-editor.js" type="text/javascript"> </script>
+  <script src="/portal/media/skins/common/javascript/uportal/flyout-nav.js" type="text/javascript"> </script>
+  <script src="/portal/media/skins/common/javascript/uportal/up-translator.js" type="text/javascript"> </script>
+  <script src="/portal/media/skins/common/javascript/uportal/up-sidebar-improved.js" type="text/javascript"> </script>
+  <script src="/portal/media/skins/common/javascript/uportal/up-print-plugin.js" type="text/javascript"> </script>
+  <script src="/portal/media/skins/common/javascript/uportal/up-ga.js" type="text/javascript"> </script>
+  <script src="/portal/media/skins/common/javascript/uportal/up-favorite.js" type="text/javascript"> </script>
+  <script src="/portal/media/skins/common/javascript/bootstrap-rating-input.js" type="text/javascript"> </script>
+  <script src="/portal/media/skins/common/javascript/uportal/up-rating-option.js" type="text/javascript"> </script>
+  <script src="/ResourceServingWebapp/rs/jquery-plugins/noty/2.2.0/jquery.noty.packaged.min.js" type="text/javascript"> </script>
+  <link rel="shortcut icon" href="/portal/favicon.ico" type="image/x-icon"/>
+</head>
+
+<body>
+  <!-- HEADER -->
+    <div class="container-fluid">
+      <header class="fixed row">
+        <div class="row">
+          <img src="img/uwcrest_web_sm.png" class="crest">
+          <div class="my-uw-nav col-xs-12">
+            <div class="col-xs-6 col-sm-4">
+              <h3><a class="header-text" href="new.html">My UW</a><span class="number-of-nots">3</span></h3>
+            </div>
+            <div class="col-xs-4">
+              <form>
+                <p><input type="search" class="main-search" placeholder="Search My UW"><span class="glyphicon glyphicon-search"></input></p>
+              </form>
+            </div>
+            <div class="col-sm-4">
+              <a href="index.html" class="log-out"><span class="glyphicon glyphicon-log-out"></span> Sign out</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-12 header-test">
+      </div>
+
+
+    </header>
+
+    <div class="row page-content">
+
+      <div id="region-sidebar-left" class="col-sm-2">
+        <section id="portlet_u1311l1n19" class="up-portlet-wrapper side-bar-menu">
+          <ul class="list-group" style="padding-top: 10px;">
+            <li class="list-group-item"><a href="#"><span class="glyphicon glyphicon-user"></span> My Profile</li>
+            <li class="list-group-item"><a href='#'><span class="glyphicon glyphicon-star"></span> Favorites</a></li>
+            <li class="list-group-item"><a href='#'><span class="glyphicon glyphicon-eye-open"></span> All Apps</a></li>
+            <li class="list-group-item"><a href="#"><span class="glyphicon glyphicon-cog"></span> Settings</li>
+            <li class="list-group-item"><a href='http://maps.wisc.edu' target='_blank'><span class="glyphicon glyphicon-map-marker"></span> Map</a></li>
+
+            <li class="list-group-item"><a href='#'><span class="glyphicon glyphicon-volume-up"></span> Feedback</a></li>
+            <li class="list-group-item" id="final-list-item"><a href='#'><span class="glyphicon glyphicon-question-sign"></span> Help</a></li>
+          </ul>
+        </section>
+      </div>
+
+      <div id="region-main" class="col-md-10 col-xs-12">
+        <div class="row">
+          <h1 class="page-h1">My Profile</h1>
+        </div>
+        <div class="row notifications">
+          <div class="col-sm-12">
+            <ul class="notifications-list">
+              <li class="notification-item"><i class="fa fa-circle read-icon"></i>Room Available <a href="http://library.university/studentlife">http://library.university/studentlife</a><span class="glyphicon glyphicon-remove exit-icon"></span></li>
+              <li class="notification-item"><i class="fa fa-circle read-icon"></i>Bike License Ticket Was Issued <a href="http://library.university/parking">http://library.university/parking</a><span class="glyphicon glyphicon-remove exit-icon"></span></li>
+              <li class="notification-item"><i class="fa fa-circle read-icon"></i>Past Due Parking Ticket <a href="http://library.university/parking">http://library.university/parking</a><span class="glyphicon glyphicon-remove exit-icon"></span></li>
+              <li class="notification-item read"><i class="fa fa-circle-thin read-icon"></i>Another Room Available <a href="http://library.university/studentlife">http://library.university/studentlife</a><span class="glyphicon glyphicon-remove exit-icon"></span></li>
+              <li class="notification-item read"><i class="fa fa-circle-thin read-icon"></i>Your Schedule Is Now Available <a href="http://library.university/studentlife">http://library.university/schedule</a><span class="glyphicon glyphicon-remove exit-icon"></span></li>
+              <li class="notification-item read"><a href="#" class="center">Show all notifications...</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-xs-12">
+            <div class="portlet-div">
+              <div class="portlet-title">
+                <h1>Weather</h1>
+                <div>
+                  <span class="glyphicon glyphicon-star portlet-options"></span>
+                  <span class="glyphicon glyphicon-resize-full portlet-options"></span>
+                  <span class="glyphicon glyphicon-remove portlet-options"></span>
+                </div>
+              </div>
+              <div class="portlet-content">
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-sm-6 left-column">
+            <div class="portlet-div">
+              <div class="portlet-title">
+                <h1>Enrichment Opportunities</h1>
+                <div>
+                  <span class="glyphicon glyphicon-star portlet-options"></span>
+                  <span class="glyphicon glyphicon-resize-full portlet-options"></span>
+                  <span class="glyphicon glyphicon-remove portlet-options"></span>
+                </div>
+              </div>
+              <div class="portlet-content">
+                <ul class="portlet-list">
+              		<li><a href='http://www.provost.wisc.edu/uaa.htm' target='_blank'>Awards and scholarships</a></li>
+              		<li><a href='http://www.provost.wisc.edu/honors_schools_colleges.htm' target='_blank'>Honors programs</a></li>
+              		<li><a href='http://www.intlstudies.wisc.edu' target='_blank'>International opportunities</a></li>
+              		<li><a href='http://www.learning.wisc.edu/communities/' target='_blank'>Learning communities</a></li>
+              		<li><a href='http://www.provost.wisc.edu/undergradresearch/' target='_blank'>Undergraduate research opportunities</a></li>
+              		<li><a href='http://www.learning.wisc.edu/ugsymposium/' target='_blank'>Undergraduate Symposium</a></li>
+              	</ul>
+              </div>
+            </div>
+            <div class="portlet-div">
+              <div class="portlet-title">
+                <h1>lynda.com@UW-Madison</h1>
+                <div>
+                  <span class="glyphicon glyphicon-star portlet-options"></span>
+                  <span class="glyphicon glyphicon-resize-full portlet-options"></span>
+                  <span class="glyphicon glyphicon-remove portlet-options"></span>
+                </div>
+              </div>
+              <div class="portlet-content">
+                <h3>Online software training videos that <b>really</b> work.</h3>
+                <ul id="lynda-list">
+                  <li>Available 24/7</li>
+                  <li>Free with a UW-Madison faculty, staff, or student NetID</li>
+                  <li>Software from Adobe, Apple, Microsoft & more.</li>
+                  <li>Classes for beginners to experts.</li>
+                  <li>Learn at your own pace: play, pause, rewind.</li>
+                  <li>Watch one tutorial at a time, or a whole course.</li>
+                  <li>Get more in-depth training through <a href="http://pte.doit.wisc.edu/">Professional Technical Education</a> or <a href="http://sts.doit.wisc.edu/">Software Training for Students.</a></li>
+                </ul>
+                <div class="button-group">
+                  <button class="btn btn-primary">Login</button>
+                  <button class="btn btn-default">Learn more</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-6 right-column">
+            <div class="portlet-div">
+              <div class="portlet-title">
+                <h1>Course Services</h1>
+                <div>
+                  <span class="glyphicon glyphicon-star portlet-options"></span>
+                  <span class="glyphicon glyphicon-resize-full portlet-options"></span>
+                  <span class="glyphicon glyphicon-remove portlet-options"></span>
+                </div>
+              </div>
+              <div class="portlet-content">
+                <ul class="portlet-list">
+                  <li><a href='https://admin.lists.wisc.edu/classlists' target='_blank'>Manage EMAIL CLASS LISTS (Classlist Module)</a></li>
+                  <li><a href='http://www.registrar.wisc.edu/classroom_scheduling.htm' target='_blank'>Classroom scheduling</a></li>
+                  <li><a href='http://registrar.wisc.edu/grades_and_grading_policy.htm' target='_blank'>Grades and grading policy</a></li>
+                  <li><a href='http://www.doit.wisc.edu/learnatuw/' target='_blank'>Learn about Learn@UW</a></li>
+                  <li><a href='http://www.library.wisc.edu/inst-services' target='_blank'>Library Instructional Services for Faculty</a></li>
+                  <li><a href='http://registrar.wisc.edu/faculty_staff_forms.htm' target='_blank'>Registrar's Office Faculty/Staff Forms</a></li>
+                  <li><a href='http://registrar.wisc.edu/documents/Official_Programs_of_Study.pdf' target='_blank'>Academic programs listing</a></li>
+                  <li><a href='https://tle.wisc.edu/' target='_blank'>Teaching and Learning Excellence@UW-Madison</a></li>
+                  <li><a href='http://registrar.wisc.edu/curricular_toolkit.htm' target='_blank'>Curricular Toolkit</a></li>
+                  <li><a href='http://learnuw.wisc.edu/' target='_blank'>LEARN@UW COURSES</a></li>
+
+                  </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- MAIN CONTENT -->
+  <div id="main_content_wrap" class="outer">
+  </div>
+
+  <!-- FOOTER  -->
+  <div id="footer_wrap" class="outer">
+    <footer class="inner">
+      <p class="copyright center">my-uw-front-end maintained by <a href="https://github.com/jhanstra">jhanstra</a></p>
+      <p class="center">Published with <a href="http://pages.github.com">GitHub Pages</a></p>
+    </footer>
+  </div>
+
+
+
+</body>
