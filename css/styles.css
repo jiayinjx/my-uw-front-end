@@ -121,10 +121,11 @@ form {
 }
 .main-search {
   width: 90%;
+  display: block;
   background-color: #b70101;
   border: none;
-  border-bottom: 2px solid #660000;
-  margin-top: -5px;
+  border-bottom: 1px solid #660000;
+  margin-top: -7px;
   margin-bottom: 5px;
   font-size: 1.6em;
   color: #f7f5e8;
@@ -222,6 +223,9 @@ li a:hover {
 .portlet-title span:hover {
   cursor: pointer;
 }
+.portlet-content div {
+  width: 100%;
+}
 .portlet-list {
   margin: 0px;
   margin-top: 10px;
@@ -244,35 +248,40 @@ li a:hover {
 }
 .portlet-div .btn {
   float: right;
-  border: 1px solid #b70101;
+  border: 1px solid #660000;
   background-color: #f7f5e8;
-  color: #b70101;
+  color: #660000;
   margin: 4px;
 }
 .portlet-div .btn-default:hover {
   color: #f7f5e8;
-  background-color: #b70101;
-  border: 1px solid #b70101;
+  background-color: #660000;
+  border: 1px solid #660000;
 }
 .portlet-div .btn-primary {
   background-color: #f7f5e8;
-  color: #660000;
-  border: 1px solid #660000;
+  color: #b70101;
+  border: 1px solid #b70101;
 }
 .portlet-div .btn:focus {
   outline: none;
 }
 .portlet-div .btn-primary:hover {
-  background-color: #660000;
-  border: 1px solid #660000;
+  background-color: #b70101;
+  border: 1px solid #b70101;
   color: #f7f5e8;
 }
 #lynda-list {
   padding-left: 15px;
 }
+.lynda-photo {
+  display: block;
+  margin: 10px auto 0px;
+}
 ::-webkit-input-placeholder {
   color: #660000;
   font-size: 0.8em;
+  line-height: 1.8em;
 }
 :-moz-placeholder {
   /* Firefox 18- */

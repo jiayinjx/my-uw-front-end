@@ -135,11 +135,12 @@ form {
 }
 .main-search {
   width:90%;
+  display:block;
   background-color:@red;
   border:none;
-  border-bottom:2px solid @darkred;
-  margin-top:-5px;
-  margin-bottom: 5px;
+  border-bottom:1px solid @darkred;
+  margin-top:-7px;
+  margin-bottom:5px;
   font-size:1.6em;
   color:@cream;
   float:right;
@@ -235,6 +236,9 @@ li a:hover {
 .portlet-title span:hover {
   cursor:pointer;
 }
+.portlet-content div {
+  width:100%;
+}
 .portlet-list {
   margin:0px;
   margin-top:10px;
@@ -257,31 +261,36 @@ li a:hover {
 }
 .portlet-div .btn {
   float:right;
-  border:1px solid @red;
+  border:1px solid @darkred;
   background-color:@cream;
-  color:@red;
+  color:@darkred;
   margin:4px;
 }
 .portlet-div .btn-default:hover {
   color:@cream;
-  background-color:@red;
-  border:1px solid @red;
+  background-color:@darkred;
+  border:1px solid @darkred;
 }
 .portlet-div .btn-primary {
   background-color:@cream;
-  color:@darkred;
-  border:1px solid @darkred;
+  color:@red;
+  border:1px solid @red;
 }
 .portlet-div .btn:focus {
   outline:none;
 }
 .portlet-div .btn-primary:hover {
-  background-color:@darkred;
-  border:1px solid @darkred;
+  background-color:@red;
+  border:1px solid @red;
   color:@cream;
 }
 #lynda-list {
   padding-left:15px;
+}
+.lynda-photo {
+  display:block;
+  margin:10px auto 0px;
+
 }
 
 
@@ -292,6 +301,7 @@ li a:hover {
 ::-webkit-input-placeholder {
    color: @darkred;
    font-size:0.8em;
+   line-height:1.8em;
    }
 :-moz-placeholder { /* Firefox 18- */
    color: @darkred;
