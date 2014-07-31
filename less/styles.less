@@ -4,6 +4,7 @@
 @gold: #E7D9C1;
 @darkred: #660000;
 @white: #fff;
+@black: #000;
 @cream: #F7F5E8;
 @grayscale1: #F5F5F5;
 @grayscale2: #E5E5E5;
@@ -170,7 +171,7 @@ form {
 }
 .up-portlet-wrapper li {
   font-size:1.1em;
-  width:140px;
+  width:120px;
   padding:7px;
   border:none;
   border-bottom:1px solid @redtransparent;
@@ -180,10 +181,10 @@ form {
   text-decoration:none;
 }
 .up-portlet-wrapper, .mockup-links-list {
-  padding:40px 0px 60px 0px;
+  padding:40px 0px 60px 20px;
 }
 .up-portlet-wrapper li, .mockup-links-list li {
-  text-align:center;
+  text-align:left;
   font-size:1.1em;
   margin:3px 0px;
 }
@@ -360,6 +361,100 @@ li.read {
 .read-icon:hover {
   cursor:pointer;
 }
+.empty-state {
+  border:none;
+  z-index:3;
+}
+#floating-div {
+  border-radius:6px;
+  box-shadow:0px 0px 50px @grayscale5;
+  width:70%;
+  height:300px;
+  margin:120px auto;
+  position:absolute;
+  left:15%;
+  z-index:40;
+  padding-top:40px;
+  background-color:@cream;
+  h1 {
+    font-size:3em;
+    font-weight:200;
+  }
+}
+.button-group-empty {
+  width:100%;
+  margin:30px auto;
+  display:block;
+
+}
+.button-div {
+  width:49%;
+  display:inline-block;
+}
+.button-group-empty .btn-primary {
+  display:inline;
+  float:none;
+  padding:15px 30px;
+  font-size:1.3em;
+  font-weight:200;
+}
+#floating-div #btn-left {
+  float:right;
+}
+#floating-div #btn-right {
+  float:left;
+}
+.fake-app-list {
+  margin:0px 0px 0px 0px;
+  padding:0px;
+}
+.fake-app-list li {
+  font-size:1.1em;
+  color:#555;
+  background-color:@gold;
+  border-radius:4px;
+  margin:8px 0px;
+  padding:8px 10px 8px 10px;
+  height:120px;
+  opacity:0.5;
+}
+#floating-div .button-group {
+  display:inline-block;
+  width:100%;
+}
+#floating-div .btn {
+  float:right;
+  border:1px solid @darkred;
+  background-color:@cream;
+  color:@darkred;
+  margin:4px;
+}
+#floating-div .btn-default:hover {
+  color:@cream;
+  background-color:@darkred;
+  border:1px solid @darkred;
+}
+#floating-div .btn-primary {
+  background-color:@cream;
+  color:@red;
+  border:1px solid @red;
+}
+#floating-div .btn:focus {
+  outline:none;
+}
+#floating-div .btn-primary:hover {
+  background-color:@red;
+  border:1px solid @red;
+  color:@cream;
+}
+
+
+
+
+
+
+
+
 
 @media (max-width:992px) {
   .main-search {
