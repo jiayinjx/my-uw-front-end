@@ -19,19 +19,24 @@
       background-color:#b70101;
       text-align:center;
       padding:10px;
-      height:70px;
-    }
-    .header img {
-      position:relative;
-      float:left;
-      height:100%;
+      height:53px;
     }
     .header h1 {
       font-size:2.3em;
       font-weight:100;
       color:#fff;
       text-align:center;
-      margin-top:7px;
+      margin-top:0px;
+      white-space:nowrap;
+    }
+    .header h2 {
+      color:#fff;
+      text-align:left;
+      font-size:1.8em;
+      font-weight:200;
+      margin:2px 0px 0px 30px;
+      padding:0;
+      white-space:nowrap;
     }
     .header div {
       display:inline;
@@ -52,27 +57,40 @@
     .service {
       width:35%;
     }
+    .crest {
+      display:block;
+      position:absolute;
+      width:55px;
+      top:-24px;
+      left:-17px;
+      z-index:5;
+      overflow:hidden;
+    }
 
     @media (max-width:768px) {
-      .header {
-        height:105px;
-      }
+
       .main-content strong {
         font-size:1.55em;
       }
       .main-content p {
         font-size:1.1em;
       }
-      .photo-div {
-        width:100%;
-        padding:auto
+      .header h1 {
+        font-size:1.8em;
+        margin:3px -50% 0px;
+        white-space:no-wrap;
       }
-      .header img {
-        float:none;
-        display:block;
-        margin:0px auto;
-        height:auto;
-        width:130px;
+      .header h2 {
+        font-size:1.3em;
+        margin-top:7px;
+      }
+      .outage-title {
+        padding:0 -50%;
+      }
+    }
+    @media (max-width:500px) {
+      .header h1 {
+        margin:3px 0px 0px;
       }
     }
   </style>
@@ -81,10 +99,11 @@
 <body>
   <div id="row">
     <div class="col-xs-12 header">
-      <div class="col-xs-12 col-sm-4 photo-div">
-        <a href="http://my.wisc.edu"><img alt="My UW-Madison" src="myuw.gif"></a>
+      <div class="col-xs-4 col-sm-4 photo-div">
+        <img src="img/uwcrest_web_sm.png" class="crest">
+        <h2>My UW</h2>
       </div>
-      <div class="col-xs-12 col-sm-4">
+      <div class="col-xs-4 outage-title">
         <h1>Service Outage</h1>
       </div>
       <div class="col-sm-4">
@@ -95,10 +114,8 @@
     <div class="row">
       <div class="col-xs-10 col-xs-offset-1 col-sm-8 col-sm-offset-2 main-content">
         <p><strong>The My UW-Madison campus portal is currently unavailable.</strong></p>
-        <p>If this is a planned outage, (e.g, service maintenance, upgrade), information about the outage should be included on the <a href="http://www.doit.wisc.edu/outages/">UW-Madison IT Outage page</a>. If this is an unplanned outage, it may be related to other system outages, in which case you may be able to find more information on the <a href="http://www.doit.wisc.edu/outages/">UW-Madison IT Outage page</a> or the <a href="http://helpdesk.doit.wisc.edu/outage.php">DoIT Help Desk Service Outage page</a>.
-      <br/>
-      <br/>
-      Some of the services and applications found within the portal are available via alternate means during the outage. Please use the links in the table below.<br/><br/></p>
+        <p>To find out more information regarding this outage and/or other system outages, please see the <a href="http://outages.doit.wisc.edu">UW-Madison IT Outages page</a> or the <a href="http://outages.wisconsin.edu">UW System IT Outages page</a></p>
+      <p>Some of the services and applications found within the portal are available via alternate means during the outage. Please use the links in the table below.<br/><br/></p>
       </div>
     </div>
 
@@ -115,12 +132,8 @@
             	<td>SOAR registration</td>
             </tr>
             <tr>
-            	<td><a href="https://wiscmail.wisc.edu">WiscMail</a></td>
-            	<td>Campus e-mail</td>
-            </tr>
-            <tr>
-            	<td><a href="https://www.doit.wisc.edu/calendaring/wisccal">WiscCal</a></td>
-            	<td>Campus calendar</td>
+            	<td><a href="https://wiscmail.wisc.edu">Email/Calendar</a></td>
+            	<td>University email and calendar system</td>
             </tr>
             <tr>
             	<td><a href="https://uwmadison.app.box.com/login">UW Madison Enterprise Box</a></td>
@@ -141,6 +154,10 @@
             <tr>
             	<td><a href="https://delta.bussvc.wisc.edu/ReqGen/MainMenu.aspx">Requisition Generator</a></td>
             	<td>External Requisition Generator</td>
+            </tr>
+            <tr>
+              <td><a href="https://www.hrs.wisconsin.edu">HRS</a></td>
+              <td>Human Resource System - payroll, benefit, time and absence information</td>
             </tr>
           </table>
         </div>

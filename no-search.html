@@ -111,158 +111,38 @@
 
       <div id="region-main" class="col-md-10 col-xs-12">
         <div class="row">
-          <h1 class="page-h1">My UW</h1>
+          <h1 class="page-h1">Search</h1>
         </div>
-        <div class="row notifications">
-          <div class="col-sm-12">
-            <ul class="notifications-list">
-              <li class="notification-item"><i class="fa fa-circle read-icon"></i>Room Available <a href="http://library.university/studentlife">http://library.university/studentlife</a><span class="glyphicon glyphicon-remove exit-icon"></span></li>
-              <li class="notification-item"><i class="fa fa-circle read-icon"></i>Bike License Ticket Was Issued <a href="http://library.university/parking">http://library.university/parking</a><span class="glyphicon glyphicon-remove exit-icon"></span></li>
-              <li class="notification-item"><i class="fa fa-circle read-icon"></i>Past Due Parking Ticket <a href="http://library.university/parking">http://library.university/parking</a><span class="glyphicon glyphicon-remove exit-icon"></span></li>
-              <li class="notification-item read"><i class="fa fa-circle-thin read-icon"></i>Another Room Available <a href="http://library.university/studentlife">http://library.university/studentlife</a><span class="glyphicon glyphicon-remove exit-icon"></span></li>
-              <li class="notification-item read"><i class="fa fa-circle-thin read-icon"></i>Your Schedule Is Now Available <a href="http://library.university/studentlife">http://library.university/schedule</a><span class="glyphicon glyphicon-remove exit-icon"></span></li>
-              <li class="notification-item read"><a href="#" class="center">Show all notifications...</a></li>
-            </ul>
-          </div>
-        </div>
+
         <div class="row">
-          <div class="col-xs-6">
-            <div class="portlet-div empty-state">
-              <div class="portlet-content">
-                  <div class="fake-apps-div">
-                    <ul class="fake-app-list">
-                      <li></li>
-                      <li></li>
-                      <li></li>
-                      <li></li>
-                    </ul>
-                  </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-xs-6">
-            <div class="portlet-div empty-state">
-              <div class="portlet-content">
-                  <div class="fake-apps-div">
-                    <ul class="fake-app-list">
-                      <li></li>
-                      <li></li>
-                      <li></li>
-                      <li></li>
-                    </ul>
-                  </div>
-              </div>
-            </div>
-          </div>
-          <div id="floating-div">
-            <h1 class="center">My UW is better with favorites</h1>
-            <p class="center"><a href="#">What are favorites?</a></p>
-            <div class="button-group-empty">
-              <div class="button-div">
-                <button class="btn btn-primary" id="btn-left">Give me recommended apps</button>
-              </div>
-              <div class="button-div">
-                <button class="btn btn-primary" id="btn-right">Browse and choose apps</button>
-              </div>
-            </div>
-          </div>
-        </div>
-        <!--<div class="row">
           <div class="col-xs-12">
             <div class="portlet-div">
-              <div class="portlet-title">
-                <h1>Weather</h1>
+              <!-- <div class="portlet-title">
+                <h1>No search results</h1>
                 <div>
                   <span class="glyphicon glyphicon-star portlet-options"></span>
                   <span class="glyphicon glyphicon-resize-full portlet-options"></span>
                   <span class="glyphicon glyphicon-remove portlet-options"></span>
                 </div>
-              </div>
+              </div> -->
               <div class="portlet-content">
+                <h2 class="center">No search results.</h2>
+                <div class="button-group-empty">
+                    <div class="button-div">
+                      <button class="btn btn-primary" id="btn-left">Browse all apps</button>
+                    </div>
+                    <div id="between-buttons">
+                      <p class="center">or</p>
+                    </div>
+                    <div class="button-div">
+                        <input type="search" placeholder="Search again" class="no-search-input btn-right"></input>
+                    </div>
+                  <p class="center feedback"><a href="#">Submit feedback about search results</a></p>
+                </div>
               </div>
             </div>
           </div>
         </div>
-        <div class="row">
-          <div class="col-sm-6 left-column">
-            <div class="portlet-div">
-              <div class="portlet-title">
-                <h1>Enrichment Opportunities</h1>
-                <div>
-                  <span class="glyphicon glyphicon-star portlet-options"></span>
-                  <span class="glyphicon glyphicon-resize-full portlet-options"></span>
-                  <span class="glyphicon glyphicon-remove portlet-options"></span>
-                </div>
-              </div>
-              <div class="portlet-content">
-                <ul class="portlet-list">
-                  <li><a href='http://www.provost.wisc.edu/uaa.htm' target='_blank'>Awards and scholarships</a></li>
-                  <li><a href='http://www.provost.wisc.edu/honors_schools_colleges.htm' target='_blank'>Honors programs</a></li>
-                  <li><a href='http://www.intlstudies.wisc.edu' target='_blank'>International opportunities</a></li>
-                  <li><a href='http://www.learning.wisc.edu/communities/' target='_blank'>Learning communities</a></li>
-                  <li><a href='http://www.provost.wisc.edu/undergradresearch/' target='_blank'>Undergraduate research opportunities</a></li>
-                  <li><a href='http://www.learning.wisc.edu/ugsymposium/' target='_blank'>Undergraduate Symposium</a></li>
-                </ul>
-              </div>
-            </div>
-            <div class="portlet-div">
-              <div class="portlet-title">
-                <h1>lynda.com@UW-Madison</h1>
-                <div>
-                  <span class="glyphicon glyphicon-star portlet-options"></span>
-                  <span class="glyphicon glyphicon-resize-full portlet-options"></span>
-                  <span class="glyphicon glyphicon-remove portlet-options"></span>
-                </div>
-              </div>
-              <div class="portlet-content">
-                <div>
-                  <a href="http://www.lynda.com"><img src="img/lynda.png" class="lynda-photo center"></a>
-                </div>
-                <h3>Online software training videos that <b>really</b> work.</h3>
-                <ul id="lynda-list">
-                  <li>Available 24/7</li>
-                  <li>Free with a UW-Madison faculty, staff, or student NetID</li>
-                  <li>Software from Adobe, Apple, Microsoft & more.</li>
-                  <li>Classes for beginners to experts.</li>
-                  <li>Learn at your own pace: play, pause, rewind.</li>
-                  <li>Watch one tutorial at a time, or a whole course.</li>
-                  <li>Get more in-depth training through <a href="http://pte.doit.wisc.edu/">Professional Technical Education</a> or <a href="http://sts.doit.wisc.edu/">Software Training for Students.</a></li>
-                </ul>
-                <div class="button-group">
-                  <button class="btn btn-primary">Login</button>
-                  <button class="btn btn-default">Learn more</button>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-sm-6 right-column">
-            <div class="portlet-div">
-              <div class="portlet-title">
-                <h1>Course Services</h1>
-                <div>
-                  <span class="glyphicon glyphicon-star portlet-options"></span>
-                  <span class="glyphicon glyphicon-resize-full portlet-options"></span>
-                  <span class="glyphicon glyphicon-remove portlet-options"></span>
-                </div>
-              </div>
-              <div class="portlet-content">
-                <ul class="portlet-list">
-                  <li><a href='https://admin.lists.wisc.edu/classlists' target='_blank'>Manage EMAIL CLASS LISTS (Classlist Module)</a></li>
-                  <li><a href='http://www.registrar.wisc.edu/classroom_scheduling.htm' target='_blank'>Classroom scheduling</a></li>
-                  <li><a href='http://registrar.wisc.edu/grades_and_grading_policy.htm' target='_blank'>Grades and grading policy</a></li>
-                  <li><a href='http://www.doit.wisc.edu/learnatuw/' target='_blank'>Learn about Learn@UW</a></li>
-                  <li><a href='http://www.library.wisc.edu/inst-services' target='_blank'>Library Instructional Services for Faculty</a></li>
-                  <li><a href='http://registrar.wisc.edu/faculty_staff_forms.htm' target='_blank'>Registrar's Office Faculty/Staff Forms</a></li>
-                  <li><a href='http://registrar.wisc.edu/documents/Official_Programs_of_Study.pdf' target='_blank'>Academic programs listing</a></li>
-                  <li><a href='https://tle.wisc.edu/' target='_blank'>Teaching and Learning Excellence@UW-Madison</a></li>
-                  <li><a href='http://registrar.wisc.edu/curricular_toolkit.htm' target='_blank'>Curricular Toolkit</a></li>
-                  <li><a href='http://learnuw.wisc.edu/' target='_blank'>LEARN@UW COURSES</a></li>
-
-                  </ul>
-              </div>
-            </div>
-          </div>
-        </div> -->
       </div>
     </div>
   </div>
