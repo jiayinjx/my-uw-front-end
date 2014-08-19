@@ -530,13 +530,6 @@ li.read {
   color: #660000;
   font-size: 1em;
 }
-
-.notification-item.unread {
-  font-weight: bold;
-  border: 1px black solid;
-  cursor: pointer;
-}
-
 @media (max-width: 992px) {
   .main-search {
     display: none;
