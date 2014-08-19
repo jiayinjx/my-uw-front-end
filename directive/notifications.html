@@ -1,6 +1,7 @@
 <ul class="notifications-list" ng-controller="NotificationController as notificationCtrl">
   <li class="notification-item" ng-repeat="notification in notificationCtrl.notifications"
-      ng-class="read:getClass($index, notifications)">
+      ng-class="notificationCtrl.getClass($index, notificationCtrl.notifications)"
+      ng-click="notificationCtrl.markRead($index, notificationCtrl.notifications)">
     <i class="fa fa-circle-thin read-icon" ></i>
     {{ notification.text }}
   </li>
