@@ -25,7 +25,7 @@ body {
 }
 .container-fluid {
   background-color: @cream;
-  background-image: url(http://www.transparenttextures.com/patterns/45-degree-fabric-light.png);
+  background-image: url(http://www.transparenttextures.com/patterns/grey-jean.png);
   padding-bottom: 100px;
 }
 h1,
@@ -224,8 +224,7 @@ form {
   border: none;
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
   background-color:@cream;
-  background-image: url(http://www.transparenttextures.com/patterns/45-degree-fabric-light.png);
-}
+background-image: url(http://www.transparenttextures.com/patterns/grey-jean.png);}
 .up-portlet-wrapper a:hover {
   text-decoration: none;
 }
@@ -374,8 +373,9 @@ li a:hover {
   border-radius: 4px;
   margin: 8px 0px;
   padding: 8px 10px 8px 10px;
-  box-shadow: 0px 0px 7px @grayscale2;
+  border-left:5px solid #b70101;
   font-weight: 400;
+  opacity:0.8;
 }
 .notifications-list a {
   color: @red;
@@ -385,9 +385,11 @@ li a:hover {
   text-decoration: none;
 }
 li.read {
-  background-color: @gold;
+  background-color: @cream;
   font-weight: 200;
   color: #555;
+  border:none;
+  opacity:0.7;
 }
 .exit-icon {
   float: right;
@@ -406,6 +408,11 @@ li.read {
 .read-icon:hover {
   cursor: pointer;
 }
+
+section.side-bar-menu {
+  box-shadow:none;
+}
+
 @media (max-width: 992px) {
   .main-search {
     display: none;
